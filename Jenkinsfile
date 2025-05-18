@@ -20,6 +20,7 @@ pipeline {
             }
         }
         stage('Sonarqube Analysis') {
+            
             steps {
                 sh ''' $SCANNER_HOME/bin/sonar-scanner -Dsonar.host.url=http://165.22.119.247:9000/ -Dsonar.login=squ_f7b4fa389629e69fa71d6d59dc2841a14980b984 -Dsonar.projectName=Ekart \
                 -Dsonar.java.binaries=. \
