@@ -11,10 +11,10 @@ pipeline {
     stages {
         stage('Git Checkout') {
             steps {
-                git branch: 'main', url: 'https://github.com/raouf21_dev/Ekart.git'
+                git branch: 'main', url: 'https://github.com/raouf21-dev/Ekart.git'
             }
         }
-        
+
         stage('Compile') {
             steps {
                 sh "mvn clean compile"
