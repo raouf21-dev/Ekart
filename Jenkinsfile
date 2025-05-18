@@ -37,7 +37,9 @@ pipeline {
         }
         stage('Build Application SCAN') {
             steps {
-                sh "mvn clean install"
+                script{
+                    sh "mvn clean install"
+                }
             }
         }
         stage("Build & Push Docker Image"){
