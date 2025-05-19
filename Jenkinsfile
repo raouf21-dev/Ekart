@@ -2,8 +2,8 @@ pipeline {
     
     agent any
     tools{
-        jdk 'jdk17'
-        maven 'maven-3.9.9'
+        jdk 'jdk11'
+        maven 'maven3'
     }
     environment{
         SCANNER_HOME = tool "sonar-scanner"
@@ -42,7 +42,7 @@ pipeline {
                 }
             }
         }
-        
+
         stage("Build & Push Docker Image"){
             steps{
                 echo "building the docker image..."
